@@ -1,0 +1,1 @@
+json.partial! @user_template, partial: 'user_template', as: :user_template
