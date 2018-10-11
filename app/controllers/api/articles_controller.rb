@@ -9,7 +9,11 @@ class Api::ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    render "show.json.jbuilder"
+    if params["version"] == "swap"
+      render "swap.json.jbuilder"
+    else
+      render "show.json.jbuilder"
+    end
   end
 
   def create
