@@ -11,6 +11,12 @@ class Api::ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     if params["version"] == "swap"
       render "swap.json.jbuilder"
+    elsif
+      params["version"] == "add"
+      render "add.json.jbuilder"
+    elsif
+      params["version"] == "redact"
+      render "redact.json.jbuilder"
     else
       render "show.json.jbuilder"
     end
@@ -28,7 +34,7 @@ class Api::ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     
-    @article.headline = params[:headline] || @article.headline
+    @article.headline = params[:headline] || @article.headlinen
     @article.body = params[:body] || @article.body
 
     if @article.save
