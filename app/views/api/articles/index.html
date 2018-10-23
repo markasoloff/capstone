@@ -1,0 +1,30 @@
+<h1>Articles</h1>
+
+<div id="articles">
+  <table>
+    <thead>
+      <tr>
+      </tr>
+    </thead>
+    <tbody>
+      <tbody>
+      <tr
+        is="article-row"
+        v-for="article in articles"
+        :article="article">
+      </tr>
+    </tbody>
+      <tr v-for="article in articles">
+        <td>{{ article.headline}}</td>
+        <td>{{ article.body }}</td>
+      </tr>
+      <script type="text/x-template" id="article-row">
+      <tr>
+        <td>{{ article.headline }}</td>
+        <td>{{ article.body }}</td>
+      </tr>
+    </script>
+
+    </tbody>
+  </table>
+</div>

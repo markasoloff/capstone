@@ -70,6 +70,92 @@ The biggest payday he ever got from his father came long after Fred Trump’s de
 Donald Trump’s cut: $177.3 million, or $236.2 million in today’s dollars."})
 
 
+
+Article.create({headline: "‘Transgender’ Could Be Defined Out of Existence Under Trump Administration",
+                body: "
+                WASHINGTON — The Trump administration is considering narrowly defining gender as a biological, immutable condition determined by genitalia at birth, the most drastic move yet in a governmentwide effort to roll back recognition and protections of transgender people under federal civil rights law.
+
+A series of decisions by the Obama administration loosened the legal concept of gender in federal programs, including in education and health care, recognizing gender largely as an individual’s choice and not determined by the sex assigned at birth. The policy prompted fights over bathrooms, dormitories, single-sex programs and other arenas where gender was once seen as a simple concept. Conservatives, especially evangelical Christians, were incensed.
+
+Now the Department of Health and Human Services is spearheading an effort to establish a legal definition of sex under Title IX, the federal civil rights law that bans gender discrimination in education programs that receive government financial assistance, according to a memo obtained by The New York Times.
+
+The department argued in its memo that key government agencies needed to adopt an explicit and uniform definition of gender as determined “on a biological basis that is clear, grounded in science, objective and administrable.” The agency’s proposed definition would define sex as either male or female, unchangeable, and determined by the genitals that a person is born with, according to a draft reviewed by The Times. Any dispute about one’s sex would have to be clarified using genetic testing.
+
+“Sex means a person’s status as male or female based on immutable biological traits identifiable by or before birth,” the department proposed in the memo, which was drafted and has been circulating since last spring. “The sex listed on a person’s birth certificate, as originally issued, shall constitute definitive proof of a person’s sex unless rebutted by reliable genetic evidence.”
+
+The new definition would essentially eradicate federal recognition of the estimated 1.4 million Americans who have opted to recognize themselves — surgically or otherwise — as a gender other than the one they were born into.
+
+Understand the issues beyond red and blue.
+
+Subscribe to The Times
+“This takes a position that what the medical community understands about their patients — what people understand about themselves — is irrelevant because the government disagrees,” said Catherine E. Lhamon, who led the Education Department’s Office for Civil Rights in the Obama administration and helped write transgender guidance that is being undone.
+
+The move would be the most significant of a series of maneuvers, large and small, to exclude the population from civil rights protections and roll back the Obama administration’s more fluid recognition of gender identity. The Trump administration has sought to bar transgender people from serving in the military and has legally challenged civil rights protections for the group embedded in the nation’s health care law.
+
+Several agencies have withdrawn Obama-era policies that recognized gender identity in schools, prisons and homeless shelters. The administration even tried to remove questions about gender identity from a 2020 census survey and a national survey of elderly citizens.
+                "})
+
+
+
+
+Article.create({headline: "Bipartisan Chorus Calls for Punishing Saudis as Trump Accuses Them of ‘Deception’",
+              body:"WASHINGTON — Members of Congress from both parties made clear on Sunday that they wanted to see Saudi Arabia punished for the killing of the journalist Jamal Khashoggi, as President Trump shifted his tone again on the issue and joined the lawmakers in expressing doubt about the Saudi government’s account of the death.
+
+“Obviously, there’s been deception and there’s been lies,” Mr. Trump said in a telephone interview late Saturday with The Washington Post. “Their stories are all over the place.”
+
+The president’s response to the Saudi accounts has likewise changed from day to day. Speaking to The New York Times on Thursday, Mr. Trump said he was confident in the intelligence reports about the episode, which paint a strong, if circumstantial, case that Mr. Khashoggi’s killing was ordered by the Saudi royal court.
+
+On Friday evening, after the Saudis, more than two weeks after Mr. Khashoggi’s death, said he had been accidentally killed during a fistfight with Saudi operatives in Istanbul, Mr. Trump was asked whether he found it credible. “I do,” he said.
+
+ADVERTISEMENT
+
+
+Lawmakers, several of whom had been briefed on the American intelligence, immediately rejected the Saudi account as lacking credibility. Allies of Mr. Trump like Senator Lindsey Graham of South Carolina and Representative Peter T. King of New York expressed some of the most scathing criticism.
+
+In his interview with The Post, Mr. Trump reiterated his view that Saudi Arabia is an important ally of the United States, and praised Crown Prince Mohammed bin Salman as a strong leader “who can keep things under check.” He added, “I mean that in a positive way.”
+
+Understand the issues beyond red and blue.
+
+Subscribe to The Times
+Mr. Trump said he did not know if Prince Mohammed had ordered the killing of Mr. Khashoggi.
+
+“Nobody has told me he’s responsible. Nobody has told me he’s not responsible,” Mr. Trump said. “We haven’t reached that point. I haven’t heard either way.”
+
+Senator Bob Corker of Tennessee, who leads the Senate Foreign Relations Committee, and other Republicans were less equivocal on Sunday. Mr. Corker said that while he was waiting for the conclusions of American intelligence agencies before making a final judgment, he believed that Prince Mohammed was behind the killing.
+
+“They’ve lost all credibility as it relates to explaining what has happened,” he said on CNN’s “State of the Union.” “I can understand the president wanting to keep open channels, but I think those of us who want to speak directly to this know that it’s just not credible.”
+
+EDITORS’ PICKS
+
+The Bright Future and Grim Death of a Privileged Hollywood Daughter
+
+The Adopted Black Baby, and the White One Who Replaced Her
+
+They Survived a Massacre. Then the Lawyers Started Calling.
+ADVERTISEMENT
+
+
+Mr. Corker, who has often been critical of the president, said he hoped to get access this week to recordings that Turkish officials have said show that Mr. Khashoggi was tortured and dismembered.
+
+Others called for serious punishments against Saudi Arabia, though any action will have to wait until Congress returns after the midterm elections next month. Senator Ben Sasse, Republican of Nebraska, suggested that the United States consider ending arms sales to the Saudis, while Senator Thom Tillis, Republican of North Carolina, said the Trump administration should consider pressing for the removal of the crown prince if it could be proved that he was behind the killing.
+
+“Saudi’s got a lot of explaining to do, and I think everything should be on the table,” Mr. Sasse said on CNN, adding, “I think the cover stories from the Saudis are a mess. You don’t bring a bone saw to an accidental fistfight inside an embassy in Turkey, or a consulate in Turkey. So the Saudis have said a whole bunch of crap that’s not right, accurate or true.”
+
+Mr. Tillis, speaking on NBC’s “Meet the Press,” said that “there has to be a consequence” for the death of Mr. Khashoggi. Asked if that consequence should include pressing King Salman to remove Prince Mohammed, he said, “I think it is to hold the people accountable who committed this horrible act, and if it is the crown prince, then I think that that is something that has to be explored.”
+
+“If the facts lead to what we all suspect they will, I think it’ll be very problematic for our relationship going forward,” Mr. Tillis added, referring to the United States’ relationship with Saudi Arabia.
+
+Senator Richard J. Durbin of Illinois, the No. 2 Democrat in the Senate, said on “Meet the Press” that the United States should expel the Saudi ambassador, and that American allies should follow suit.
+
+“Unless the Saudi kingdom understands that civilized countries around the world are going to reject this conduct and make sure that they pay a price for it, they’ll continue doing it,” Mr. Durbin said.
+
+Sign Up for On Politics With Lisa Lerer
+A spotlight on the people reshaping our politics. A conversation with voters across the country. And a guiding hand through the endless news cycle, telling you what you really need to know.
+
+SIGN UP
+Noah Weiland contributed reporting."})
+
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #

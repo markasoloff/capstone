@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
+    # resources :articles, :except => [:new, :edit]
+
     get 'articles' => 'articles#index'
     post 'articles' => 'articles#create'
     get 'articles/:id' => 'articles#show'

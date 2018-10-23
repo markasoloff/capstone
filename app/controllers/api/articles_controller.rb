@@ -1,10 +1,23 @@
 class Api::ArticlesController < ApplicationController
   # before_action :authenticate_admin, except: [:index, :show]
 
+  # def index
+  #   @articles = Article.all
+  #   respond_to do |format|
+  #     format.html
+  #     format.json { render :json => @articles }
+  #   end
+  # end
+
+
+
   def index
-    @articles = Article.all
-    # @articles = @articles.where(remote: true)
-    render "index.json.jbuilder"
+    response = HTTP.get("https://api.nytimes.com/svc/search/v2/articlesearch.json")
+    render json: response.parse
+
+    # @articles = Article.all
+    # # @articles = @articles.where(remote: true)
+    # render "index.json.jbuilder"
   end
 
   def show
@@ -23,12 +36,12 @@ class Api::ArticlesController < ApplicationController
   end
 
   def create
-   @article = Article.new(
+    @article = Article.new(
                           headline: params[:headline],
                           body: params[:body]
                           )
-  @article.save
-  render 'show.json.jbuilder'
+    @article.save
+    render 'show.json.jbuilder'
   end
 
   def update
@@ -37,11 +50,11 @@ class Api::ArticlesController < ApplicationController
     @article.headline = params[:headline] || @article.headlinen
     @article.body = params[:body] || @article.body
 
-    if @article.save
-      render 'show.json.jbuilder'
-    else
-      render json: {errors: @article.errors.full_messages }, status: :unprocessable_entity
-    end
+      if @article.save
+        render 'show.json.jbuilder'
+      else
+        render json: {errors: @article.errors.full_messages }, status: :unprocessable_entity
+      end
 
   end
 
@@ -50,8 +63,5 @@ class Api::ArticlesController < ApplicationController
     @article.destroy
     render json: {status: "Article was removed."}
   end
-
-
-
 
 end
