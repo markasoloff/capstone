@@ -1,17 +1,27 @@
+require 'guardian-content'      
 class Api::ArticlesController < ApplicationController
   # before_action :authenticate_admin, except: [:index, :show]
 
   def index
-    response = HTTP.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=trump&api-key=#{ENV['API_KEY']}")
-    data = response.parse
-    render json: data
+    response = HTTP.get("https://content.guardianapis.com/search?order-by=newest&q=Trump&show-fields=body&api-key=#{ENV['API_KEY']}")
+      array = []
+      i = 0
+      x = 0
+      10.times do  
+        title = response.parse["response"]["results"][i]["webTitle"]
+        body = response.parse["response"]["results"][x]["fields"]["body"]
+        array << title
+        array << body
+        i = i + 1
+        x = x + 1
+      end     
+      #     i = i + 1
+      #   array << selection_body
+      #     x = x + 1
+      # end
+    render json: array
   end
-
-  # def index
-  #   @articles = Article.all
-  #   render "index.json.jbuilder"
-  #   # render json: @articles.parse
-  # end
+ 
 
   def show
     @article = Article.find(params[:id])
