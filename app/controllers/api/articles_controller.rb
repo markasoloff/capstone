@@ -3,26 +3,29 @@ class Api::ArticlesController < ApplicationController
   # before_action :authenticate_admin, except: [:index, :show]
 
   def index
-    response = HTTP.get("https://content.guardianapis.com/search?order-by=newest&q=Trump&show-fields=body&api-key=#{ENV['API_KEY']}")
-      array = []
+    response = HTTP.get("https://content.guardianapis.com/search?order-by=newest&q=Trump&show-fields=body&api-key=#{ENV['API_KEY']}").body
+    response = JSON.parse(response)
+      @array = []
       i = 0
-      x = 0
-      10.times do  
-        title = response.parse["response"]["results"][i]["webTitle"]
-        body = response.parse["response"]["results"][x]["fields"]["body"]
-        array << title
-        array << body
+      3.times do  
+        story_title = response["response"]["results"][i]["webTitle"]
+        story_body = response["response"]["results"][i]["fields"]["body"]
+        # story_id = response["response"]["results"][i]["id"]
+        story_id = i
+        story = { title: story_title, body: story_body, id: story_id}
+        # story = {title => body}
+        @array << story
+        # array << title
+        # array << body
         i = i + 1
-        x = x + 1
       end     
       #     i = i + 1
       #   array << selection_body
       #     x = x + 1
       # end
-    render json: array
+    render json: @array
   end
  
-
   def show
     @article = Article.find(params[:id])
     if params["version"] == "swap"
