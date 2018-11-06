@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     get 'articles' => 'articles#index'
     post 'articles' => 'articles#create'
 
-    get 'articles/by_title' => 'articles#by_title'
+    post 'articles/by_api_ref' => 'articles#by_api_ref'
 
     get 'articles/:id' => 'articles#show'
     patch "articles/:id" => "articles#update"

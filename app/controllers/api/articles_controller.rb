@@ -15,26 +15,23 @@ class Api::ArticlesController < ApplicationController
         story = {title: @story_title, body: @story_body}
         @array << story
         i = i + 1
-        article = Article.find_or_create_by(headline: @story_title, body: @story_body)
       end     
     render json: @array
   end
 
 
-  # def show
-  #   @article = Article.find(params[:id])
-  #   if params["version"] == "swap"
-  #     render "swap.json.jbuilder"
-  #   elsif
-  #     params["version"] == "add"
-  #     render "add.json.jbuilder"
-  #   elsif
-  #     params["version"] == "redact"
-  #     render "redact.json.jbuilder"
-  #   else
-  #     render "show.json.jbuilder"
-  #   end
-  # end
+  def show
+    @article = Article.find(params[:id])
+    if params["version"] == "swap"
+      render "swap.json.jbuilder"
+    elsif params["version"] == "add"
+      render "add.json.jbuilder"
+    elsif params["version"] == "redact"
+      render "redact.json.jbuilder"
+    else
+      render "show.json.jbuilder"
+    end
+  end
 
   def create
     @article = Article.new(
@@ -65,8 +62,14 @@ class Api::ArticlesController < ApplicationController
     render json: {status: "Article was removed."}
   end
 
-  def by_title
-    article = Article.find_by(headline: params[:title])
+  def by_api_ref
+    article = Article.find_or_create_by(api_ref: params[:api_ref])
+    
+    unless article.body
+        response = HTTP.get("#{article.api_ref}?show-fields=body&api-key=#{ENV['API_KEY']}")
+        content = response.parse["response"]["content"]
+        article.update(body: response.parse["response"]["content"]["fields"]["body"], headline: response.parse["response"]["content"]["webTitle"])
+    end
     render json: {id: article.id}
   end
 
