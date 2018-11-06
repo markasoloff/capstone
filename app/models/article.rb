@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
 
-belongs_to :user
+# belongs_to :user
 
   def swap_body
     substitution_hash = { "Trump" => "\"Mothertruckin\" Trump",

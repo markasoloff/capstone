@@ -7,39 +7,34 @@ class Api::ArticlesController < ApplicationController
     response = JSON.parse(response)
       @array = []
       i = 0
-      3.times do  
-        story_title = response["response"]["results"][i]["webTitle"]
-        story_body = response["response"]["results"][i]["fields"]["body"]
+      6.times do  
+        @story_title = (response["response"]["results"][i]["webTitle"]).upcase
+        @story_body = response["response"]["results"][i]["fields"]["body"]
         # story_id = response["response"]["results"][i]["id"]
-        story_id = i
-        story = { title: story_title, body: story_body, id: story_id}
-        # story = {title => body}
+        @story_id = i
+        story = {title: @story_title, body: @story_body}
         @array << story
-        # array << title
-        # array << body
         i = i + 1
+        article = Article.find_or_create_by(headline: @story_title, body: @story_body)
       end     
-      #     i = i + 1
-      #   array << selection_body
-      #     x = x + 1
-      # end
     render json: @array
   end
- 
-  def show
-    @article = Article.find(params[:id])
-    if params["version"] == "swap"
-      render "swap.json.jbuilder"
-    elsif
-      params["version"] == "add"
-      render "add.json.jbuilder"
-    elsif
-      params["version"] == "redact"
-      render "redact.json.jbuilder"
-    else
-      render "show.json.jbuilder"
-    end
-  end
+
+
+  # def show
+  #   @article = Article.find(params[:id])
+  #   if params["version"] == "swap"
+  #     render "swap.json.jbuilder"
+  #   elsif
+  #     params["version"] == "add"
+  #     render "add.json.jbuilder"
+  #   elsif
+  #     params["version"] == "redact"
+  #     render "redact.json.jbuilder"
+  #   else
+  #     render "show.json.jbuilder"
+  #   end
+  # end
 
   def create
     @article = Article.new(
@@ -68,6 +63,11 @@ class Api::ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @article.destroy
     render json: {status: "Article was removed."}
+  end
+
+  def by_title
+    article = Article.find_by(headline: params[:title])
+    render json: {id: article.id}
   end
 
 end
