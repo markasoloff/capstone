@@ -19,6 +19,8 @@ gem 'rack-cors', require: 'rack/cors'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 gem 'guardian-content', '~> 0.2.2'
+gem 'rails-html-sanitizer'
+gem 'phrasify', '~> 0.0.1'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

@@ -2,24 +2,6 @@ require 'guardian-content'
 class Api::ArticlesController < ApplicationController
   # before_action :authenticate_admin, except: [:index, :show]
 
-  def index
-    response = HTTP.get("https://content.guardianapis.com/search?order-by=newest&q=Trump&show-fields=body&api-key=#{ENV['API_KEY']}").body
-    response = JSON.parse(response)
-      @array = []
-      i = 0
-      6.times do  
-        @story_title = (response["response"]["results"][i]["webTitle"]).upcase
-        @story_body = response["response"]["results"][i]["fields"]["body"]
-        # story_id = response["response"]["results"][i]["id"]
-        @story_id = i
-        story = {title: @story_title, body: @story_body}
-        @array << story
-        i = i + 1
-      end     
-    render json: @array
-  end
-
-
   def show
     @article = Article.find(params[:id])
     if params["version"] == "swap"
@@ -45,7 +27,7 @@ class Api::ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     
-    @article.headline = params[:headline] || @article.headlinen
+    @article.headline = params[:headline] || @article.headline
     @article.body = params[:body] || @article.body
 
       if @article.save
@@ -68,7 +50,8 @@ class Api::ArticlesController < ApplicationController
     unless article.body
         response = HTTP.get("#{article.api_ref}?show-fields=body&api-key=#{ENV['API_KEY']}")
         content = response.parse["response"]["content"]
-        article.update(body: response.parse["response"]["content"]["fields"]["body"], headline: response.parse["response"]["content"]["webTitle"])
+        article.update(body: response.parse["response"]["content"]["fields"]["body"], 
+        headline:response.parse["response"]["content"]["webTitle"])
     end
     render json: {id: article.id}
   end
