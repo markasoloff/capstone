@@ -47,16 +47,16 @@ class Article < ApplicationRecord
   end
 
   def redact_headline
-    redact_hash = {"Republicans" => "**pub***ns","polls" => "po*es","elections" => "****ions", "terrific" => "****ing", "tremendous" => "****ty", "great" => "****ked", "speech" => "**** ****apping", "investigation" => "****k party"}
+    redact_hash = {"Republicans" => "**pub***ns","polls" => "po*es","elections" => "****ions", "t" => " <span class='redacted'>****</span>ing ", "tremendous" => "****ty", "great" => "****ked", "speech" => "**** ****apping", "investigation" => "****k party"}
 
     matchers = redact_hash
-    headline.gsub(/Republicans|polls|elections|terrific|tremendous|great|speech|investigation/) { |match| matchers[match] }
+    headline.gsub(/Republicans|polls|elections|t|tremendous|great|speech|investigation/) { |match| matchers[match] }
   end
 
   def redact_body
-      redact_hash = {"Republicans" => "**pub***ns","polls" => "po*es", "terrific" => "****ing", "tremendous" => "****ty", "great" => "****ked", "speech" => "**** ****apping", "investigation" => "****k party"}
+      redact_hash = {"Republicans" => "**pub***ns","polls" => "po*es","elections" => "****ions", "t" => " <span class='redacted'>****</span>ing ", "tremendous" => "****ty", "great" => "****ked", "speech" => "**** ****apping", "investigation" => "****k party"}
       
       matchers = redact_hash
-      body.gsub(/Republicans|polls|terrific|tremendous|great|speech|investigation/) { |match| matchers[match] }
+      body.gsub(/Republicans|polls|elections|t|tremendous|great|speech|investigation/) { |match| matchers[match] }
   end
 end
