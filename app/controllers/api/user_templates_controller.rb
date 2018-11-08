@@ -14,12 +14,12 @@ class Api::UserTemplatesController < ApplicationController
 
     def create
        @user_template = UserTemplate.new(
-                        target: params[:target],
-                        new_content: params[:new_content],
-                        rule: params[:rule]
+                        target: params[:wordOne],
+                        new_content: params[:subWordOne],
+                        rule: ""
                         )
       @user_template.save
-      render 'show.json.jbuilder'
+      render json: {status: "Template accepted"}
     end
 
     def update

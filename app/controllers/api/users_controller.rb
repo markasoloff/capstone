@@ -1,5 +1,4 @@
 class Api::UsersController < ApplicationController
-# before_action :authenticate_admin, except: [:index, :show]
 
   def index
     @users = User.all
@@ -15,10 +14,11 @@ class Api::UsersController < ApplicationController
   def create
    @user = User.new(
                     email: params[:email],
-                    password_digest: params[:password_digest]
+                    password: params[:password],
+                    password_confirmation: params[:password_confirmation]
                     )
-  @user.save
-  render 'show.json.jbuilder'
+    @user.save
+    render 'show.json.jbuilder'
   end
 
   def update

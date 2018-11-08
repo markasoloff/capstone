@@ -1,7 +1,5 @@
-require 'guardian-content'      
 class Api::ArticlesController < ApplicationController
-  # before_action :authenticate_admin, except: [:index, :show]
-
+     
   def show
     @article = Article.find(params[:id])
     if params["version"] == "swap"

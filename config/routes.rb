@@ -23,5 +23,16 @@ Rails.application.routes.draw do
     patch 'user_templates/:id' => 'user_templates#update'
     delete 'user_templates/:id' => 'user_templates#destroy'
 
+    post "/sessions" => "sessions#create"
   end
 end
+
+
+
+
+
+
+
+
+
+
