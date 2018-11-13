@@ -37,10 +37,10 @@ class Article < ApplicationRecord
                                         "pollution" => "<span class='swap'>mung of the earth</span>",
                                          "American" => "<span class='swap'>Boopmerican</span>",
                                           "american" => "<span class='swap'>schmoopmerican</span>",
-                                           "Mueller" => "<span class='swap'>\"Platinum Johnson\" Mueller</span>", "recused" => "<span class='swap'>\"brocused\"</span>" }
+                                           "Mueller" => "<span class='swap'>\"Platinum Johnson\" Mueller</span>", "recused" => "<span class='swap'>\"brocused\"</span>", "polls" => "<span class='swap'>trolls</span>", "North" => "<span class='swap'>Borth</span>", "show" => "<span class='swap'>smorch</span>", "office" => "<span class='swap'>orifice</span>,", "state" => "<span class='swap'>buzzworthy doobage</span>", "expect" => "<span class='swap'>expectorate</span>", "delay" => "<span class='swap'>lollygag</span>", "denies" => "<span class='swap'>mighty-morphs</span>", "attorney" => "<span class='swap'>law-raptor</span>", "team" => "<span class='swap'>meat squad</span>", "conservative" => "<span class='swap'>orcish</span>", "liberal" => "<span class='swap'>cyber-punk</span>", "Barack" => "<span class='swap'>Balrog</span>", "experience" => "<span class='swap'>blorfsperience</span>", "work" => "<span class='swap'>bubble time</span>", "pressure" => "<span class='swap'>nard-squonching</span>", "two" => "<span class='swap'> couple, two, tree</span>", "man" => "<span class='swap'>munster</span>" }
 
     matchers = substitution_hash
-    body.gsub(/Trump|Mr. Trump|president|President|presidency|Sessions|US|economic|country|global|commission|Washington|tax|business|refused|region|Europe|British|minister|spending|Britain|senator|Senate|congress|congressional|Pence|argues|government|women|story|recently|public|pollution|American|american|Mueller|recused/){ |match| matchers[match] } 
+    body.gsub(/Trump|Mr. Trump|president|President|presidency|Sessions|US|economic|country|global|commission|Washington|tax|business|refused|region|Europe|British|minister|spending|Britain|senator|Senate|congress|congressional|Pence|argues|government|women|story|recently|public|pollution|American|american|Mueller|recused|polls|North|show|office|state|expect|delay|denies|attorney|team|conservative|liberal|Barack|experience|work|pressure|two|man/){ |match| matchers[match] } 
     
   end
 
@@ -79,10 +79,10 @@ class Article < ApplicationRecord
                                          "American" => "<span class='swap'>Boopmerican</span>",
                                           "american" => "<span class='swap'>schmoopmerican</span>",
                                            "Mueller" => "<span class='swap'>\"Platinum Johnson\" Mueller</span>", "recused" => "<span class='swap'>\"brocused\"</span>",
-                                            'Democrats' => '<div class="animated pulse">Demogorgons</div>'}
+                                            'Democrats' => '<span class="swap">Demogorgons</swap>', "polls" => "<span class='swap'>trolls</span>", "North" => "<span class='swap'>Borth</span>", "show" => "<span class='swap'>smorch</span>", "office" => "<span class='swap'>orifice</span>,", "state" => "<span class='swap'>buzzworthy doobage</span>", "expect" => "<span class='swap'>expectorate</span>", "delay" => "<span class='swap'>lollygag</span>", "denies" => "<span class='swap'>mighty-morphs</span>", "attorney" => "<span class='swap'>law-raptor</span>", "team" => "<span class='swap'>meat squad</span>", "conservative" => "<span class='swap'>orcish</span>", "liberal" => "<span class='swap'>cyber-punk</span>", "Barack" => "<span class='swap'>Balrog</span>", "experience" => "<span class='swap'>blorfsperience</span>", "work" => "<span class='swap'>bubble time</span>", "pressure" => "<span class='swap'>nard-squonching</span>", "two" => "<span class='swap'> couple, two, tree</span>", "man" => "<span class='swap'>munster</span>"}
 
     matchers = substitution_hash
-    headline.gsub(/Trump|Mr. Trump|president|President|presidency|Sessions|US|economic|country|global|commission|Washington|tax|business|refused|region|Europe|British|minister|spending|Britain|senator|Senate|congress|congressional|Pence|argues|government|women|story|recently|public|pollution|American|american|Mueller|recused|Democrats/){ |match| matchers[match] }
+    headline.gsub(/Trump|Mr. Trump|president|President|presidency|Sessions|US|economic|country|global|commission|Washington|tax|business|refused|region|Europe|British|minister|spending|Britain|senator|Senate|congress|congressional|Pence|argues|government|women|story|recently|public|pollution|American|american|Mueller|recused|Democrats|polls|North|show|office|state|expect|delay|denies|attorney|team|conservative|liberal|Barack|experience|work|pressure|two|man/){ |match| matchers[match] }
   end
 
   def add_headline
