@@ -17,6 +17,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
 module Capstone
   class Application < Rails::Application
     config.generators.assets = false
@@ -31,5 +32,6 @@ module Capstone
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.assets.initialize_on_precompile = false
   end
 end
